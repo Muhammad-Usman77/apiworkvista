@@ -33,7 +33,7 @@ class MessageWidgets extends StatelessWidget {
 }
 
 class MessageWidgets2 extends StatelessWidget {
-  MessageWidgets2({super.key});
+  const MessageWidgets2({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -16,14 +16,14 @@ class RafWidgets extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
-            children: [Text('$text1')],
+            children: [Text(text1)],
           ),
         ),
         Expanded(
           flex: 1,
           child: Column(
             children: [
-              Image.asset(height: 250, width: double.infinity, '$image1'),
+              Image.asset(height: 250, width: double.infinity, image1),
             ],
           ),
         ),
@@ -47,7 +47,7 @@ class RafWidgets2 extends StatelessWidget {
           flex: 1,
           child: Column(
             children: [
-              Image.asset(height: 250, width: double.infinity, '$image1'),
+              Image.asset(height: 250, width: double.infinity, image1),
             ],
           ),
         ),
@@ -56,7 +56,7 @@ class RafWidgets2 extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
-            children: [Text('$text1')],
+            children: [Text(text1)],
           ),
         ),
       ],
