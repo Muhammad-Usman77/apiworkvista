@@ -1,8 +1,9 @@
+import 'package:apiprojectvista/utils/clr.dart';
 import 'package:flutter/material.dart';
 
 class MessageWidgets extends StatelessWidget {
- final  String? image;
- const  MessageWidgets({super.key, this.image});
+  final String? image;
+  const MessageWidgets({super.key, this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +20,12 @@ class MessageWidgets extends StatelessWidget {
           ),
         ),
         Card(
+          color: AppColor.btnback2,
           child: Column(
             children: [
               Text(
                 'usman awan usman awan\n usman awan usman awan\n usman awan usman\n usman',
+                style: TextStyle(color: AppColor.appclr),
               ),
             ],
           ),
@@ -42,10 +45,13 @@ class MessageWidgets2 extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Card(
+          color: AppColor.btnback2,
+
           child: Column(
             children: [
               Text(
                 'usman awan usman awan\n usman awan usman awan\n usman awan usman\n usman',
+                style: TextStyle(color: AppColor.appclr),
               ),
             ],
           ),

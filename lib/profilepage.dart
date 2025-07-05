@@ -5,6 +5,8 @@ void main() {
 }
 
 class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -170,12 +172,13 @@ class ProfilePage extends StatelessWidget {
               title: Text(
                 'knows English',
                 style: TextStyle(color: Colors.black),
+                
               ),
 
               trailing: Icon(Icons.more_horiz_outlined),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 10),
+              padding: const EdgeInsets.only(left: 10),     
               child: Align(
                 alignment: Alignment.topLeft,
                 child: Text(

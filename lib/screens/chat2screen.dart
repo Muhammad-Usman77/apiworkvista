@@ -1,17 +1,17 @@
-import 'package:apiprojectvista/screens/chat2screen.dart';
 import 'package:apiprojectvista/screens/commonwidgets/tabwidgets.dart';
+import 'package:apiprojectvista/screens/historyscreen.dart';
 import 'package:apiprojectvista/screens/widgets/chatdetails.dart';
 import 'package:apiprojectvista/utils/clr.dart';
 import 'package:flutter/material.dart';
 
-class ChatDetailsScreen extends StatefulWidget {
-  const ChatDetailsScreen({super.key});
+class ChatScreen2 extends StatefulWidget {
+  const ChatScreen2({super.key});
 
   @override
-  State<ChatDetailsScreen> createState() => _ChatDetailsScreenState();
+  State<ChatScreen2> createState() => _ChatScreen2State();
 }
 
-class _ChatDetailsScreenState extends State<ChatDetailsScreen> {
+class _ChatScreen2State extends State<ChatScreen2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,14 +28,21 @@ class _ChatDetailsScreenState extends State<ChatDetailsScreen> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 20),
-                child: BackBtn1(icons: Icons.arrow_back_ios_new),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HistoryScreen()),
+                    );
+                  },
+                  child: BackBtn2(
+                    icons: Icons.arrow_back_ios_new,
+                    text1: 'Message',
+                  ),
+                ),
               ),
               SizedBox(height: 20),
-              InkWell(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ChatScreen2()));
-                },
-                child: TabWidgets1(text1: 'Message', text2: 'Explore')),
+              TabWidgets1(text1: 'General Message', text2: 'Ride Explore'),
               SizedBox(height: 20),
               Expanded(
                 child: ListView.builder(

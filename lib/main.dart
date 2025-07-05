@@ -1,5 +1,4 @@
-import 'package:apiprojectvista/constranpractice/felxible.dart';
-import 'package:apiprojectvista/profilepage.dart';
+import 'package:apiprojectvista/pageview/page1.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -32,7 +31,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: ProfilePage(),
+      home: Page1(),
     );
   }
 }

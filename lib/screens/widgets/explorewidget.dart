@@ -1,3 +1,4 @@
+import 'package:apiprojectvista/utils/clr.dart';
 import 'package:flutter/material.dart';
 
 class ExploreWidget extends StatelessWidget {
@@ -23,10 +24,10 @@ const  ExploreWidget({super.key, this.name, this.profileImage, this.exploreImage
                 image: DecorationImage(image: AssetImage('$profileImage')),
               ),
             ),
-            Text('$name'),
+            Text('$name',style: TextStyle(color: AppColor.appclr),),
           ],
         ),
-        Text('$detailText'),
+        Text('$detailText',style: TextStyle(color: AppColor.appclr),),
         Container(
           height: 200,
           width: double.infinity,
@@ -35,9 +36,9 @@ const  ExploreWidget({super.key, this.name, this.profileImage, this.exploreImage
           ),child: Image.asset('$exploreImage'),
         ),
         Row(children: [
-          Icon(iconData1),
+          Icon(iconData1,color: AppColor.appclr,),
           SizedBox(width: 20,),
-          Icon(iconData2),
+          Icon(iconData2,color: AppColor.appclr,),
         ],)
       ],
     );
