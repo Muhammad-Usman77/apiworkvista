@@ -1,6 +1,7 @@
 import 'package:apiprojectvista/pageview/page2.dart';
 import 'package:apiprojectvista/pageview/page3.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Page1 extends StatefulWidget {
   const Page1({super.key});
@@ -22,6 +23,9 @@ class _Page1State extends State<Page1> {
 
   @override
   Widget build(BuildContext context) {
+    final heightScreen = MediaQuery.of(context).size.height;
+    final widthScreen = MediaQuery.of(context).size.height;
+
     return Scaffold(
       appBar: AppBar(title: const Text('PageView Demo')),
       body: Column(
@@ -79,7 +83,36 @@ class _Page1State extends State<Page1> {
               }),
             ),
           ),
+          ElevatedButton(
+            onPressed: () {
+              showModalBottomSheet(
+                isScrollControlled: true,
+                context: context,
+                builder: (context) => Container(
+                  height: heightScreen * 0.6,
+                  width: double.infinity,
+                  color: Colors.amber,
+                ),
+              );
+            },
+            child: Text('show model bottom sheet'),
+          ),
+          FaIcon(FontAwesomeIcons.diamond, size: 20, color: Colors.amber),
         ],
+      ),
+      bottomSheet: ElevatedButton(
+        onPressed: () {
+          showModalBottomSheet(
+            isScrollControlled: true,
+            context: context,
+            builder: (context) => Container(
+              height: heightScreen * 0.6,
+              width: double.infinity,
+              color: Colors.black,
+            ),
+          );
+        },
+        child: Text('show model bottom '),
       ),
     );
   }
